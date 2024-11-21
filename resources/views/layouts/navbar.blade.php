@@ -13,7 +13,11 @@
 </head>
 
 <body>
-<nav class="bg-hijau-100">
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+
+    <nav class="bg-hijau-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <!-- Logo Section -->
@@ -23,14 +27,18 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden md:flex items-center space-x-[35px]">
-                    <a href="" class="font-bold text-gray-400 hover:text-white">Profile</a>
                     <a href="{{ route('home') }}" class="font-bold text-gray-400 hover:text-white">Home</a>
                     <a href="" class="font-bold text-gray-400 hover:text-white">By Activity</a>
                 </div>
 
                 <!-- User Greeting -->
                 <div class="flex items-center space-x-4">
-                    <span class="hidden md:block text-gray-300">Hai, <span class="font-medium text-white">Afif!</span></span>
+                    <span class="hidden md:block text-gray-300">Hai, <span class="font-medium text-white">{{ auth()->user()->name }}!</span></span>
+
+                    <!-- Logout Link (visible on desktop) -->
+                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="text-gray-300 hover:text-white">
+                        Log Out
+                    </a>
                 </div>
 
                 <!-- Mobile Menu Toggle -->
@@ -46,12 +54,33 @@
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#profile" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Profile</a>
-            <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Home</a>
-            <a href="#activity" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">By Activity</a>
-            <div class="px-4 py-2 text-gray-600">Hai, <span class="font-medium text-gray-800">Afif!</span></div>
+            <a href="{{ route('home') }}" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Home</a>
+            <a href="" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">By Activity</a>
+            <div class="px-4 py-2 text-gray-600">Hai, <span class="font-medium text-gray-800">{{ auth()->user()->name }}!</span></div>
+
+            <!-- Logout Link in Mobile Menu -->
+            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Log Out</a>
         </div>
     </nav>
+
+    <!-- Logout Form (hid
+
+
+    <!-- Logout Form (hidden, triggered by click) -->
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+        @csrf
+    </form>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
 
 </body>
 

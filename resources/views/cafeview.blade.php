@@ -41,16 +41,15 @@
                             </svg>
                         </div>
                         <!-- Cafe Name -->
-                        <h1 class="text-2xl font-bold text-gray-800">Alfath Cafe</h1>
+                        <h1 class="text-2xl font-bold text-gray-800">{{ $cafe->name }}</h1>
                     </div>
                 </div>
-
 
                 <!-- Cafe Description -->
                 <div class="space-y-2 p-2">
                     <h2 class="text-lg font-semibold text-gray-800">Deskripsi</h2>
                     <p class="text-gray-700 leading-relaxed">
-                        Alfath Cafe hadir sebagai salah satu tempat paling nyaman di Malang, yang tak hanya menyediakan sajian kuliner nikmat, tetapi juga suasana ideal untuk para pelajar dan mahasiswa yang ingin mengerjakan tugas. Dengan desain interior yang nyaman dan atmosfer tenang, Alfath Cafe semakin populer di kalangan anak muda sebagai tempat nugas yang menyenangkan.
+                        {{ $cafe->deskripsi }}
                     </p>
                 </div>
 
@@ -58,7 +57,7 @@
                 <div class="space-y-2 p-2">
                     <h2 class="text-lg font-semibold text-gray-800">Alamat</h2>
                     <p class="text-gray-700 leading-relaxed">
-                        Jl. Sunan Kalijaga No.35A, Dinoyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65149.
+                        {{ $cafe->location }}
                     </p>
                 </div>
 
@@ -66,14 +65,15 @@
                 <div class="p-2 pb-2 grid grid-cols-2 gap-4">
                     <div class="space-y-2">
                         <h2 class="text-lg font-semibold text-gray-800">Jam Buka</h2>
-                        <p class="text-gray-700 leading-relaxed">09.00 WIB</p>
+                        <p class="text-gray-700 leading-relaxed">{{ $cafe->jam_buka }}</p>
                     </div>
                     <div class="space-y-2">
                         <h2 class="text-lg font-semibold text-gray-800">Jam Tutup</h2>
-                        <p class="text-gray-700 leading-relaxed">22.00 WIB</p>
+                        <p class="text-gray-700 leading-relaxed">{{ $cafe->jam_tutup }}</p>
                     </div>
                 </div>
             </div>
+
 
             <!-- Review -->
             <div class="bg-hijau-50 p-6 rounded-lg shadow-lg space-y-8">
@@ -91,39 +91,29 @@
                         <!-- Ratings -->
                         <div class="flex items-center space-x-2">
                             <!-- Rating Number -->
-                            <p class="text-3xl font-bold text-gray-800">4.5</p>
-                            <!-- Star Icon (Interactive) -->
+                            <p class="text-3xl font-bold text-gray-800">{{ $averageRating }}</p>
+                            <!-- Star Icons (Interactive) -->
                             <div class="flex space-x-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500 cursor-pointer hover:text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 {{ $i <= $averageRating ? 'text-yellow-500' : 'text-gray-300' }} cursor-pointer hover:text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="none">
                                     <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500 cursor-pointer hover:text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500 cursor-pointer hover:text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500 cursor-pointer hover:text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500 cursor-pointer hover:text-yellow-400" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
+                                    </svg>
+                                    @endfor
                             </div>
-
                         </div>
 
                         <!-- Review Form -->
                         <div class="bg-white p-4 rounded-lg shadow">
                             <h3 class="text-lg font-semibold text-gray-800 mb-2">Submit Your Review</h3>
-                            <form action="#" method="POST">
+                            <form action="{{ route('reviews.submit', ['id' => $cafe->id]) }}" method="POST">
+                                @csrf <!-- CSRF Protection -->
                                 <!-- Review Text -->
                                 <div class="mb-4">
                                     <textarea
                                         name="review"
                                         rows="4"
                                         class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-hijau-300"
-                                        placeholder="Write your review here..."></textarea>
+                                        placeholder="Your review here..."></textarea>
                                 </div>
 
                                 <!-- Star Rating -->
@@ -132,91 +122,57 @@
                                         <label for="rating" class="text-gray-800 font-semibold">Rating</label>
                                         <div class="flex space-x-1">
                                             <!-- Radio Buttons for Rating (1 to 5 Stars) -->
-                                            <input type="radio" id="star5" name="rating" value="5" class="hidden peer" />
+                                            <input type="radio" id="star5" name="rating" value="1" class="hidden peer" />
                                             <label for="star5" class="cursor-pointer text-yellow-500 text-2xl peer-checked:text-yellow-500">★</label>
 
-                                            <input type="radio" id="star4" name="rating" value="4" class="hidden peer" />
+                                            <input type="radio" id="star4" name="rating" value="2" class="hidden peer" />
                                             <label for="star4" class="cursor-pointer text-yellow-500 text-2xl peer-checked:text-yellow-500">★</label>
 
                                             <input type="radio" id="star3" name="rating" value="3" class="hidden peer" />
                                             <label for="star3" class="cursor-pointer text-yellow-500 text-2xl peer-checked:text-yellow-500">★</label>
 
-                                            <input type="radio" id="star2" name="rating" value="2" class="hidden peer" />
+                                            <input type="radio" id="star2" name="rating" value="4" class="hidden peer" />
                                             <label for="star2" class="cursor-pointer text-yellow-500 text-2xl peer-checked:text-yellow-500">★</label>
 
-                                            <input type="radio" id="star1" name="rating" value="1" class="hidden peer" />
+                                            <input type="radio" id="star1" name="rating" value="5" class="hidden peer" />
                                             <label for="star1" class="cursor-pointer text-yellow-500 text-2xl peer-checked:text-yellow-500">★</label>
                                         </div>
                                     </div>
-                                    <!-- Submit Button -->
-                                    <button
-                                        type="submit"
-                                        class="mt-4 px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
-                                        Submit
-                                    </button>
                                 </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="mt-4 px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                                    Submit
+                                </button>
                             </form>
+
                         </div>
                     </div>
 
                     <!-- Right: Reviews List -->
                     <div class="space-y-4">
                         <h3 class="text-lg font-semibold text-gray-800">Reviews</h3>
-                        <!-- Single Review -->
-                        <div class="bg-white p-4 rounded-lg shadow space-y-2">
-                            <div class="flex space-x-1">
-                                <!-- Stars for review -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                            </div>
-                            <p class="text-sm text-gray-800">
-                                "Great place to hang out and work! The atmosphere is calm, and the coffee is excellent."
-                            </p>
-                            <span class="text-sm text-gray-500">- John Doe</span>
-                        </div>
 
+                        @foreach ($ratings as $review)
                         <!-- Single Review -->
                         <div class="bg-white p-4 rounded-lg shadow space-y-2">
                             <div class="flex space-x-1">
                                 <!-- Stars for review -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" stroke="none">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 {{ $i <= $review->rating ? 'text-yellow-500' : 'text-gray-300' }}" fill="currentColor" viewBox="0 0 24 24" stroke="none">
                                     <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-300" fill="currentColor" viewBox="0 0 24 24" stroke="none">
-                                    <path d="M12 17.75L18.16 21l-1.6-6.8L21 9.75l-7-1L12 3l-2 5.75-7 1 4.44 4.45L5.84 21z" />
-                                </svg>
+                                    </svg>
+                                    @endfor
                             </div>
                             <p class="text-sm text-gray-800">
-                                "I love the interior design. A very cozy spot for studying and meetings!"
+                                "{{ $review->review_text }}"
                             </p>
-                            <span class="text-sm text-gray-500">- Jane Smith</span>
+                            <span class="text-sm text-gray-500">- {{ $review->nama_reviewer }}</span>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-        </div>
 </body>
 
 @endsection

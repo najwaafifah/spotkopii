@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Krona+One&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     @vite('resources/css/app.css')
     @vite(['resources/js/app.js'])
 </head>
@@ -29,19 +30,11 @@
             <!-- Social Media Icons -->
             <div class="flex items-center space-x-4 mb-6">
                 <!-- Instagram -->
-                <a href="https://instagram.com" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900">
-                    <img src="https://cdn.jsdelivr.net/npm/heroicons@2.0.0/24/outline/camera.svg" alt="Instagram" class="w-6 h-6">
-                </a>
-                <!-- Facebook -->
-                <a href="https://facebook.com" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900">
-                    <img src="https://cdn.jsdelivr.net/npm/heroicons@2.0.0/24/outline/bookmark.svg" alt="Facebook" class="w-6 h-6">
-                </a>
-                <!-- TikTok -->
-                <a href="https://tiktok.com" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900">
-                    <img src="https://cdn.jsdelivr.net/npm/heroicons@2.0.0/24/outline/video-camera.svg" alt="TikTok" class="w-6 h-6">
+                <a href="https://www.instagram.com/najwaaafifah/" class="w-10 h-10 rounded-full flex items-center justify-center text-gray-900">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                 </a>
                 <!-- Call -->
-                <a href="tel:+123456789" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900">
+                <a href="tel:+6288226475135" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900">
                     <img src="https://cdn.jsdelivr.net/npm/heroicons@2.0.0/24/outline/phone.svg" alt="Call" class="w-6 h-6">
                 </a>
             </div>

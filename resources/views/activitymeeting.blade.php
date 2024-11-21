@@ -46,7 +46,7 @@
                         </div>
                         <!-- Button -->
                         <div class="flex justify-center items-center">
-                            <a href="{{ route('cafe1') }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                            <a href="{{ route('cafe1', ['id' => 1]) }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
                                 Selengkapnya
                             </a>
                         </div>
@@ -65,16 +65,15 @@
                 <div class="flex flex-col w-full md:w-2/3 justify-center items-center p-5">
                     <div class="flex flex-col">
                         <!-- Title -->
-                        <div class="text-2xl text-center font-bold pb-5">Alfath Space</div>
+                        <div class="text-2xl text-center font-bold pb-5">Dialoogi space and coffeee</div>
                         <!-- Description -->
                         <div class="text-gray-700 text-sm leading-relaxed pb-5">
-                            Alfath Cafe hadir sebagai salah satu tempat paling nyaman di Malang, yang tak hanya menyediakan sajian kuliner nikmat, tetapi juga suasana ideal untuk para pelajar dan mahasiswa yang ingin mengerjakan tugas. Dengan desain interior yang nyaman dan atmosfer tenang, Alfath Cafe semakin populer di kalangan anak muda sebagai tempat nugas yang menyenangkan.
-                        </div>
+                            Dialoogi Space and Coffee adalah tempat nongkrong asik dan cozy yang menggabungkan suasana kafe dengan ruang kreatif. Dengan desain interior yang modern dan nyaman, Dialoogi cocok untuk kamu yang ingin bekerja, belajar, atau sekadar bersantai bersama teman-teman. Di sini, kamu bisa menikmati beragam kopi spesial, camilan, dan hidangan lezat lainnya.</div>
                         <!-- Button -->
                         <div class="flex justify-center items-center">
-                            <button class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                            <a href="{{ route('cafe1', ['id' => 2]) }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
                                 Selengkapnya
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -90,16 +89,39 @@
                 <div class="flex flex-col w-full md:w-2/3 justify-center items-center p-5">
                     <div class="flex flex-col">
                         <!-- Title -->
-                        <div class="text-2xl text-center font-bold pb-5">Alfath Space</div>
+                        <div class="text-2xl text-center font-bold pb-5">7 Seven Chicken</div>
                         <!-- Description -->
                         <div class="text-gray-700 text-sm leading-relaxed pb-5">
-                            Alfath Cafe hadir sebagai salah satu tempat paling nyaman di Malang, yang tak hanya menyediakan sajian kuliner nikmat, tetapi juga suasana ideal untuk para pelajar dan mahasiswa yang ingin mengerjakan tugas. Dengan desain interior yang nyaman dan atmosfer tenang, Alfath Cafe semakin populer di kalangan anak muda sebagai tempat nugas yang menyenangkan.
-                        </div>
+                            7 Seven Chicken adalah restoran cepat saji yang tidak hanya menawarkan hidangan ayam lezat dan terjangkau, tetapi juga menyediakan suasana yang nyaman dan ruang yang cukup luas, menjadikannya tempat yang cocok untuk berbagai keperluan, termasuk meeting atau pertemuan kecil, kamu bisa menikmati sajian berkualitas sambil berdiskusi dengan kolega atau teman dalam suasana yang santai. </div>
                         <!-- Button -->
                         <div class="flex justify-center items-center">
-                            <button class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                            <a href="{{ route('cafe1', ['id' => 3]) }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
                                 Selengkapnya
-                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full max-w flex flex-col md:flex-row justify-center items-center p-2 pl-2 pr-4 bg-hijau-200 rounded-lg border-2 border-hijau-100">
+                <!-- Image Section -->
+                <div class="w-full md:w-1/3">
+                    <img src="{{ asset('images/meeting.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
+                </div>
+
+                <!-- Text Section -->
+                <div class="flex flex-col w-full md:w-2/3 justify-center items-center p-5">
+                    <div class="flex flex-col">
+                        <!-- Title -->
+                        <div class="text-2xl text-center font-bold pb-5">Flava Cafe</div>
+                        <!-- Description -->
+                        <div class="text-gray-700 text-sm leading-relaxed pb-5">
+                            Flava Coffee adalah kafe dengan nuansa hangat dan penuh karakter, ideal untuk kamu yang ingin menikmati kopi nikmat dalam suasana nyaman dan santai. Dengan ruang yang nyaman dan suasana tenang, Flava Coffee juga menjadi pilihan tepat untuk mengadakan meeting atau pertemuan kecil, sehingga kamu bisa berdiskusi sambil menikmati sajian berkualitas dalam atmosfer yang cozy dan profesional.</div>
+                        <!-- Button -->
+                        <div class="flex justify-center items-center">
+                            <a href="{{ route('cafe1', ['id' => 4]) }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                                Selengkapnya
+                            </a>
                         </div>
                     </div>
                 </div>

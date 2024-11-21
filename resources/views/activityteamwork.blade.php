@@ -17,7 +17,7 @@
 
 <body class="bg-hijau-50 font-sans">
     <div>
-        <div class="relative w-full max-w p-20"> 
+        <div class="relative w-full max-w p-20">
             <!-- Image -->
             <div class="relative">
                 <img src="{{ asset('images/meeting.png') }}" alt="Meeting" class="w-full h-64 object-cover rounded-lg">
@@ -39,16 +39,15 @@
                 <div class="flex flex-col w-full md:w-2/3 justify-center items-center p-5">
                     <div class="flex flex-col">
                         <!-- Title -->
-                        <div class="text-2xl text-center font-bold pb-5">Alfath Space</div>
+                        <div class="text-2xl text-center font-bold pb-5">Kotask Café</div>
                         <!-- Description -->
                         <div class="text-gray-700 text-sm leading-relaxed pb-5">
-                            Alfath Cafe hadir sebagai salah satu tempat paling nyaman di Malang, yang tak hanya menyediakan sajian kuliner nikmat, tetapi juga suasana ideal untuk para pelajar dan mahasiswa yang ingin mengerjakan tugas. Dengan desain interior yang nyaman dan atmosfer tenang, Alfath Cafe semakin populer di kalangan anak muda sebagai tempat nugas yang menyenangkan.
-                        </div>
+                            Kotask Kaffe adalah tempat nongkrong yang asyik dan nyaman, dengan suasana yang cozy dan menu kopi yang menggugah selera. Cocok untuk kamu yang ingin bersantai, ngobrol bareng teman, atau sekadar menikmati waktu sendiri. Dengan pilihan kopi terbaik dan suasana yang chill, Kotask Kaffe jadi pilihan sempurna untuk menghabiskan waktu sambil menikmati kopi dan camilan enak.</div>
                         <!-- Button -->
                         <div class="flex justify-center items-center">
-                            <button class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                            <a href="{{ route('cafe1', ['id' => 9]) }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
                                 Selengkapnya
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -65,16 +64,15 @@
                 <div class="flex flex-col w-full md:w-2/3 justify-center items-center p-5">
                     <div class="flex flex-col">
                         <!-- Title -->
-                        <div class="text-2xl text-center font-bold pb-5">Alfath Space</div>
+                        <div class="text-2xl text-center font-bold pb-5">Roketto Coffee & Co</div>
                         <!-- Description -->
                         <div class="text-gray-700 text-sm leading-relaxed pb-5">
-                            Alfath Cafe hadir sebagai salah satu tempat paling nyaman di Malang, yang tak hanya menyediakan sajian kuliner nikmat, tetapi juga suasana ideal untuk para pelajar dan mahasiswa yang ingin mengerjakan tugas. Dengan desain interior yang nyaman dan atmosfer tenang, Alfath Cafe semakin populer di kalangan anak muda sebagai tempat nugas yang menyenangkan.
-                        </div>
+                            Roketto Coffee & Co adalah tempat nongkrong yang keren dan santai, menawarkan kopi berkualitas dengan atmosfer yang hangat dan modern. Dilengkapi dengan berbagai pilihan minuman kopi dan makanan ringan, Roketto Coffee & Co adalah tempat yang pas untuk ngobrol bareng teman, bekerja, atau sekadar menikmati waktu santai.</div>
                         <!-- Button -->
                         <div class="flex justify-center items-center">
-                            <button class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                            <a href="{{ route('cafe1', ['id' => 10]) }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
                                 Selengkapnya
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -90,24 +88,47 @@
                 <div class="flex flex-col w-full md:w-2/3 justify-center items-center p-5">
                     <div class="flex flex-col">
                         <!-- Title -->
-                        <div class="text-2xl text-center font-bold pb-5">Alfath Space</div>
+                        <div class="text-2xl text-center font-bold pb-5">Pesen Kopi Plus</div>
                         <!-- Description -->
                         <div class="text-gray-700 text-sm leading-relaxed pb-5">
-                            Alfath Cafe hadir sebagai salah satu tempat paling nyaman di Malang, yang tak hanya menyediakan sajian kuliner nikmat, tetapi juga suasana ideal untuk para pelajar dan mahasiswa yang ingin mengerjakan tugas. Dengan desain interior yang nyaman dan atmosfer tenang, Alfath Cafe semakin populer di kalangan anak muda sebagai tempat nugas yang menyenangkan.
-                        </div>
+                            Pesen Kopi Plus adalah tempat nongkrong yang asyik dengan suasana yang nyaman dan santai. Pesen Kopi Plus cocok untuk kamu yang ingin bersantai, ngobrol dengan teman, atau sekadar menikmati waktu sendirian. Dengan atmosfer yang cozy, tempat ini menjadi pilihan tepat untuk menikmati secangkir kopi sambil menikmati obrolan seru atau bekerja dengan tenang.</div>
                         <!-- Button -->
                         <div class="flex justify-center items-center">
-                            <button class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                            <a href="{{ route('cafe1', ['id' => 11]) }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
                                 Selengkapnya
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="w-full max-w flex flex-col md:flex-row justify-center items-center p-2 pl-2 pr-4 bg-hijau-200 rounded-lg border-2 border-hijau-100">
+                <!-- Image Section -->
+                <div class="w-full md:w-1/3">
+                    <img src="{{ asset('images/meeting.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
+                </div>
+
+                <!-- Text Section -->
+                <div class="flex flex-col w-full md:w-2/3 justify-center items-center p-5">
+                    <div class="flex flex-col">
+                        <!-- Title -->
+                        <div class="text-2xl text-center font-bold pb-5">CW Coffee & Eatery</div>
+                        <!-- Description -->
+                        <div class="text-gray-700 text-sm leading-relaxed pb-5">
+                            CW Coffee & Eatery adalah tempat nongkrong yang nyaman dengan suasana yang cozy dan santai. Menyajikan berbagai pilihan kopi lezat dan makanan ringan yang menggugah selera, CW Coffee & Eatery cocok untuk kamu yang ingin menghabiskan waktu bersama teman, bekerja, atau sekadar bersantai.<!-- Button -->
+                            <div class="flex justify-center items-center">
+                                <a href="{{ route('cafe1', ['id' => 12]) }}" class="px-4 py-2 bg-hijau-300 text-white rounded-lg hover:bg-hijau-50">
+                                    Selengkapnya
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
-
-
-    </div>
 </body>
 
 @endsection
