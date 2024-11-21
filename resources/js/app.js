@@ -1,8 +1,7 @@
 import './bootstrap';
 
-const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+import Alpine from 'alpinejs';
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+window.Alpine = Alpine;
+
+Alpine.start();
