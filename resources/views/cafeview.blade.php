@@ -20,7 +20,7 @@
         <div class="flex flex-col gap-5 px-8 py-10 bg-hijau-50 h-max">
             <!-- Back Button -->
             <div class="flex items-start">
-                <button class="flex items-center text-blue-500 font-semibold space-x-3 hover:underline">
+                <button onclick="history.back()" class="flex items-center text-blue-500 font-semibold space-x-3 hover:underline">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
