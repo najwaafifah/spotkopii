@@ -16,7 +16,7 @@
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <!-- Add the background image div -->
-        <div class="bg-cover bg-center h-screen" style="background-image: url('{{ asset('images/bglogin.png') }}');">
+        <div class="bg-cover bg-center h-screen" style="background-image: url('{{ asset('images/login.png') }}');">
             <!-- Semi-transparent overlay to darken the background image -->
             <div class="flex justify-center items-center h-full bg-black bg-opacity-60">
                 <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">

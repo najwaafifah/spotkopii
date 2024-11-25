@@ -32,7 +32,7 @@
             <div class="w-full max-w flex flex-col md:flex-row justify-center items-center p-2 pl-2 pr-4 bg-hijau-200 rounded-lg border-2 border-hijau-100">
                 <!-- Image Section -->
                 <div class="w-full md:w-1/3">
-                    <img src="{{ asset('images/meeting.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
+                    <img src="{{ asset('images/kopituju.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
                 </div>
 
                 <!-- Text Section -->
@@ -57,7 +57,7 @@
             <div class="w-full max-w flex flex-col md:flex-row justify-center items-center p-2 pl-2 pr-4 bg-hijau-200 rounded-lg border-2 border-hijau-100">
                 <!-- Image Section -->
                 <div class="w-full md:w-1/3">
-                    <img src="{{ asset('images/meeting.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
+                    <img src="{{ asset('images/sejenak.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
                 </div>
 
                 <!-- Text Section -->
@@ -81,7 +81,7 @@
             <div class="w-full max-w flex flex-col md:flex-row justify-center items-center p-2 pl-2 pr-4 bg-hijau-200 rounded-lg border-2 border-hijau-100">
                 <!-- Image Section -->
                 <div class="w-full md:w-1/3">
-                    <img src="{{ asset('images/meeting.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
+                    <img src="{{ asset('images/handal.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
                 </div>
 
                 <!-- Text Section -->
@@ -105,7 +105,7 @@
             <div class="w-full max-w flex flex-col md:flex-row justify-center items-center p-2 pl-2 pr-4 bg-hijau-200 rounded-lg border-2 border-hijau-100">
                 <!-- Image Section -->
                 <div class="w-full md:w-1/3">
-                    <img src="{{ asset('images/meeting.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
+                    <img src="{{ asset('images/monstera.png') }}" alt="Alfath Space" class="w-full h-auto p-10 object-cover rounded-lg">
                 </div>
 
                 <!-- Text Section -->

@@ -22,6 +22,7 @@
             <div class="flex justify-between h-16">
                 <!-- Logo Section -->
                 <div class="flex items-center">
+                    <img src="images/logo1.png" alt="Logo SpotCafe" class="h-8 w-8 mr-10">
                     <span class="text-xl font-bold text-white">SpotCafe</span>
                 </div>
 

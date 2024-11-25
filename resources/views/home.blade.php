@@ -18,7 +18,7 @@
 <body class="bg-hijau-50 font-sans">
     <div>
         <div class="relative bg-cover bg-center h-[300px]"
-            style="background-image: url('{{ asset('images/meeting.png') }}')">
+            style="background-image: url('{{ asset('images/BgHome.png') }}')">
 
             <div class="absolute inset-0 bg-black bg-opacity-40"></div> <!-- Dark overlay -->
 
@@ -43,7 +43,7 @@
                 <a href="{{ route('activitymeeting') }}" class="block">
                     <div class="relative">
                         <!-- Image -->
-                        <img src="{{ asset('images/meeting.png') }}" alt="Meeting Cafe" class="w-64 h-64 rounded-lg border-4 border-coklat-100">
+                        <img src="{{ asset('images/bagian1.png') }}" alt="Meeting Cafe" class="w-64 h-64 rounded-lg border-4 border-coklat-100">
                         <!-- Curved Rectangle with Text -->
                         <div class="font-semibold absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-hijau-300 text-white text-center px-4 py-2 shadow-xl border-hijau-100">
                             Meeting
@@ -83,10 +83,7 @@
                 <!-- Right Div -->
                 <div class="flex-1 bg-hijau-200 p-6 rounded-lg border-2 border-hijau-300">
                     <p class="text-sm text-gray-700 leading-relaxed">
-                        Café-café ini tidak hanya menyediakan tempat nyaman, tetapi juga suasana yang mendukung produktivitas, inspirasi, dan kenyamanan saat bekerja atau meeting.
-                        Setiap café memiliki keunggulan tersendiri, mulai dari fasilitas lengkap seperti Wi-Fi cepat, colokan listrik, hingga ruang privat yang dapat disewa untuk meeting
-                        lebih eksklusif. Dengan berbagai keunggulan ini, café-café ini menjadi pilihan tempat meeting yang praktis dan inspiratif. Setiap tempat menawarkan pengalaman
-                        berbeda yang dapat disesuaikan dengan kebutuhan meeting Spoties untuk memastikan pertemuan yang efektif dan menyenangkan.
+                        Café-café ini juga menjadi pilihan sempurna untuk me-time, menawarkan suasan yang tenang dan nyaman bagi Spoties yang ingin menghabiskan waktu sendirian, bersantai, atau sekedar melarikan diri dari rutinitas sehari-hari. Dengan berbagai fasilitas dan suasana yang di tawarkan, cafe-cafe ini tidak hanya sekedar tempat minum kopi, tetapi juga lokasi ideal untuk menikmati waktu berkualitas sendirian. Setiap cafe memiliki pesonanya masing-masing, sehingga Spoties bisa memilih tempat yang paling sesuai dengan kebutuhan me-time Spoties untuk mendapatkan ketenangan dan kesegaran baru.
                     </p>
                 </div>
             </div>
@@ -96,7 +93,7 @@
                 <a href="{{ route('activityteamwork') }}" class="block">
                     <div class="relative">
                         <!-- Image -->
-                        <img src="{{ asset('images/meeting.png') }}" alt="Meeting Cafe"" alt=" Meeting Stock" class="w-64 h-64 rounded-lg border-4 border-coklat-100">
+                        <img src="{{ asset('images/bagian2.png') }}" alt="Meeting Cafe"" alt=" Meeting Stock" class="w-64 h-64 rounded-lg border-4 border-coklat-100">
                         <!-- Curved Rectangle with Text -->
                         <div class="font-semibold absolute -bottom-5 left-1/2 transform -translate-x-1/2 bg-hijau-300 text-white text-center px-4 py-2 shadow-xl border-hijau-100">
                             Teamwork
@@ -109,10 +106,7 @@
                 <!-- Right Div -->
                 <div class="flex-1 bg-hijau-200 p-6 rounded-lg border-2 border-hijau-300">
                     <p class="text-sm text-gray-700 leading-relaxed">
-                        Café-café ini tidak hanya menyediakan tempat nyaman, tetapi juga suasana yang mendukung produktivitas, inspirasi, dan kenyamanan saat bekerja atau meeting.
-                        Setiap café memiliki keunggulan tersendiri, mulai dari fasilitas lengkap seperti Wi-Fi cepat, colokan listrik, hingga ruang privat yang dapat disewa untuk meeting
-                        lebih eksklusif. Dengan berbagai keunggulan ini, café-café ini menjadi pilihan tempat meeting yang praktis dan inspiratif. Setiap tempat menawarkan pengalaman
-                        berbeda yang dapat disesuaikan dengan kebutuhan meeting Spoties untuk memastikan pertemuan yang efektif dan menyenangkan.
+                        Café-café ini juga menjadi pilihan ideal untuk nongkrong bersama teman-teman. Dengan suasana yang santai, dekorasi yang estetik, dan menu yang variatif, cafe-cafe ini menawarkan pengalaman berkumpul yang menyenangkan. Dengan suasana yang menyenangkan, pilihan menu yang beragam, dan tempat yang nyaman, cafe-cafe ini bisa menjadi spot favorit untuk nongkrong. Baik untuk sekedar ngobrol santai, menikmati minuman favorit atau menghabiskan waktu berkualitas bersama teman-teman, cafe-cafe ini menyediakan semua yang dibutuhkan untuk nongkrong yang seru dan memorable.
                     </p>
                 </div>
             </div>
